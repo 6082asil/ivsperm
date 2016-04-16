@@ -72,7 +72,7 @@ class Faculty(models.Model):
 
 
     def __str__(self):
-        return self.name
+        return self.verbose
 
 
 class Line(models.Model):
