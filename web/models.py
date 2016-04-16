@@ -37,6 +37,13 @@ class University(models.Model):
         unique=False,
         verbose_name='Веб-сайт',
     )
+    additional_info = models.TextField(
+        max_length=65536,
+        default='',
+        blank=True,
+        unique=False,
+        verbose_name='Дополнительно',
+    )
 
     def __str__(self):
         return self.verbose
@@ -69,7 +76,13 @@ class Faculty(models.Model):
         unique=False,
         verbose_name='Коды специальностей',
     )
-
+    additional_info = models.TextField(
+        max_length=65536,
+        default='',
+        blank=True,
+        unique=False,
+        verbose_name='Дополнительно',
+    )
 
     def __str__(self):
         return self.verbose
@@ -117,4 +130,11 @@ class Line(models.Model):
         default=0,
         blank=True,
         unique=False,
+    )
+    additional_info = models.TextField(
+        max_length=65536,
+        default='',
+        blank=True,
+        unique=False,
+        verbose_name='Дополнительно',
     )
