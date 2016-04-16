@@ -138,3 +138,6 @@ class Line(models.Model):
         unique=False,
         verbose_name='Дополнительно',
     )
+
+    def __str__(self):
+        return self.verbose
