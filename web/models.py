@@ -30,6 +30,13 @@ class University(models.Model):
         unique=False,
         verbose_name='Коды факультетов',
     )
+    website = models.URLField(
+        max_length=256,
+        default='',
+        blank=True,
+        unique=False,
+        verbose_name='Веб-сайт',
+    )
 
     def __str__(self):
         return self.verbose
@@ -63,6 +70,7 @@ class Faculty(models.Model):
         verbose_name='Коды специальностей',
     )
 
+
     def __str__(self):
         return self.name
 
@@ -73,18 +81,40 @@ class Line(models.Model):
         default='',
         max_length=256,
         blank=True,
-        unique=True,
+        unique=False,
         verbose_name='Код специальности',
     )
     verbose = models.CharField(
         default='',
         max_length=256,
         blank=True,
-        unique=True,
+        unique=False,
         verbose_name='Название специальности',
     )
     faculty = models.ForeignKey(
         'Faculty',
         on_delete=models.CASCADE,
         verbose_name='Факультет',
+    )
+    exams = models.CharField(
+        default='',
+        max_length=256,
+        blank=True,
+        unique=False,
+    )
+    exam_mins = models.CharField(
+        default='',
+        max_length=256,
+        blank=True,
+        unique=False,
+    )
+    budget = models.IntegerField(
+        default=0,
+        blank=True,
+        unique=False,
+    )
+    commercial = models.IntegerField(
+        default=0,
+        blank=True,
+        unique=False,
     )
