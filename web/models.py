@@ -67,6 +67,7 @@ class Faculty(models.Model):
     university = models.ForeignKey(
         'University',
         on_delete=models.CASCADE,
+        related_name='+',
         verbose_name='Университет',
     )
     lines = models.CharField(
@@ -107,6 +108,7 @@ class Line(models.Model):
     faculty = models.ForeignKey(
         'Faculty',
         on_delete=models.CASCADE,
+        related_name='+',
         verbose_name='Факультет',
     )
     exams = models.CharField(
