@@ -58,12 +58,11 @@ WSGI_APPLICATION = 'ivsperm.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'HOST': '37.46.130.118',
-        'HOST': 'localhost',
+        'HOST': 'ec2-54-247-184-117.eu-west-1.compute.amazonaws.com',
         'PORT': '5432',
-        'NAME': 'edgecomics',
-        'USER': 'www',
-        'PASSWORD': 'edgecomicsru',
+        'NAME': 'd5n5pvn8p3n5ed',
+        'USER': 'hnnedfresxjfmx',
+        'PASSWORD': 'wrQuHZJSxBQpr255ykWnyX7BMM',
     },
 }
 
