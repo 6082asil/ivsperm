@@ -1,0 +1,18 @@
+form div {
+    display: block;
+}
+
+form div * {
+    display: inline;
+}
+
+form div input[name="exam1_mark"],
+form div input[name="exam2_mark"],
+form div input[name="exam3_mark"] {
+    width: 50px;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}

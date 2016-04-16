@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h4>Университеты</h4>
+<table border="1px solid black">
+{% for un in univ %}
+<tr>
+    <td>{{ un.verbose }}</td>
+    <td>{{ un.city }}</td>
+    <td>{{ un.website }}</td>
+</tr>
+{% endfor %}
+</table>
+<h4>Факультеты</h4>
+<table border="1px solid black">
+{% for fa in facu %}
+<tr>
+    <td>{{ fa.verbose }}</td>
+</tr>
+{% endfor %}
+</table>
+<h4>Специальности</h4>
+<table border="1px solid black">
+{% for li in line %}
+<tr>
+    <td>{{ li.verbose }}</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}

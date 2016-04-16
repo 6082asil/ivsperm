@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <title>От каждого по способностям, каждому по потребностям</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/base.css' %}"/>
+</head>
+<body>
+    <h2>Выбор университета</h2>
+    {% block content %}
+    <form action="select" method="get">
+        <div>
+            <select name="exam1">
+                <option value="none">-------</option>
+                <option value="мат">Математика</option>
+                <option value="инф">Информатика</option>
+                <option value="ино">Иностранный язык</option>
+                <option value="общ">Обществознание</option>
+                <option value="гео">География</option>
+                <option value="био">Биология</option>
+                <option value="рус">Русский язык</option>
+                <option value="ист">История</option>
+                <option value="физ">Физика</option>
+                <option value="лит">Литература</option>
+                <option value="твр">Творческая работа</option>
+                <option value="хим">Химия</option>
+            </select>
+            <input type="text" name="exam1_mark" placeholder="Балл">
+        </div>
+        <div>
+            <select name="exam2">
+                <option value="none">-------</option>
+                <option value="мат">Математика</option>
+                <option value="инф">Информатика</option>
+                <option value="ино">Иностранный язык</option>
+                <option value="общ">Обществознание</option>
+                <option value="гео">География</option>
+                <option value="био">Биология</option>
+                <option value="рус">Русский язык</option>
+                <option value="ист">История</option>
+                <option value="физ">Физика</option>
+                <option value="лит">Литература</option>
+                <option value="твр">Творческая работа</option>
+                <option value="хим">Химия</option>
+            </select>
+            <input type="text" name="exam2_mark" placeholder="Балл">
+        </div>
+        <div>
+            <select name="exam3">
+                <option value="none">-------</option>
+                <option value="мат">Математика</option>
+                <option value="инф">Информатика</option>
+                <option value="ино">Иностранный язык</option>
+                <option value="общ">Обществознание</option>
+                <option value="гео">География</option>
+                <option value="био">Биология</option>
+                <option value="рус">Русский язык</option>
+                <option value="ист">История</option>
+                <option value="физ">Физика</option>
+                <option value="лит">Литература</option>
+                <option value="твр">Творческая работа</option>
+                <option value="хим">Химия</option>
+            </select>
+            <input type="text" name="exam3_mark" placeholder="Балл">
+        </div>
+        <select name="city">
+            <option>Пермь</option>
+            <option>Москва</option>
+        </select>
+        <input type="submit" value="Выбрать">
+    </form>
+    {% endblock %}
+</body>
+</html>
