@@ -5,6 +5,6 @@ from web import views
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^$/', views.index),
+    url(r'^$', views.index),
     url(r'^admin/', include(admin.site.urls)),
 )
