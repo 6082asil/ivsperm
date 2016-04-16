@@ -24,4 +24,7 @@ def index(request):
 
 
 def select(request):
-    exams = list(Line.objects.raw('select exams, exam_mins from web_line left join '))
+    universities = list(University.objects.all())
+    faculties = list(Faculty.objects.all())
+    lines = list(Line.objects.all())
+    return render(request, 'select.html', {'univ': universities, 'facu': faculties, 'line': lines})
