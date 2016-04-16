@@ -1,0 +1,11 @@
+*.[oa]
+*.~
+*.pyc
+*.sh
+*.save
+*.save.1
+.idea
+migrations
+pycharm
+media
+__pycache__

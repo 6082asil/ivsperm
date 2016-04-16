@@ -1,6 +1,7 @@
 import os
 import dj_database_url
 
+
 DATABASES = {}
 DATABASES['default'] = dj_database_url.config()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
@@ -94,6 +95,8 @@ USE_TZ = True
 #STATICFILES_DIRS = (
 #    os.path.join(BASE_DIR, 'static'),
 #)
+
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 #STATICFILES_FINDERS = (
 #    'django.contrib.staticfiles.finders.FileSystemFinder',
