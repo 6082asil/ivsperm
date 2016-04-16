@@ -1,3 +1,7 @@
 dj-database-url==0.4.1
 Django==1.9.5
 gunicorn==19.4.5
+<<<<<<< HEAD
+=======
+psycopg2==2.6.1
+>>>>>>> 9226d2358e5e2f099a18e681b13334ebc842e9b3
